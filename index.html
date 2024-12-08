@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Resume Builder</h1>
+
+        <form id="resume-form">
+            <h2>Personal Information</h2>
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            
+            <label for="profile-picture">Upload Profile Picture</label>
+            <input type="file" id="profile-picture" accept="image/*">
+
+            <h2>Education</h2>
+            <input type="text" id="degree" placeholder="Degree" required>
+            <input type="text" id="university" placeholder="University" required>
+            <input type="text" id="grad-year" placeholder="Graduation Year" required>
+            
+            <h2>Work Experience</h2>
+            <input type="text" id="job-title" placeholder="Job Title" required>
+            <input type="text" id="company" placeholder="Company" required>
+            <input type="text" id="job-year" placeholder="Duration" required>
+            
+            <h2>Skills</h2>
+            <input type="text" id="skills" placeholder="Skills (separated by commas)" required>
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+
+        <div id="resume-preview" class="resume">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
